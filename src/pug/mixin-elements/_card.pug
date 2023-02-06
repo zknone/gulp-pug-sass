@@ -1,0 +1,5 @@
+mixin _card(block_name, item)
+    div(class=`${block_name}__card`)
+        h3(class=`${block_name}__card-header`)= item.title
+        img(class=`${block_name}__card-img` src= item.img)
+        p(class=`${block_name}__card-text`)= item.text

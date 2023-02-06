@@ -1,0 +1,18 @@
+@import "../mixin";
+
+.page {
+    background-color: antiquewhite;
+    @include container;
+}
+
+.page__button {
+    @include btn-primary;
+}
+
+.page__second-button {
+    @include btn-secondary;
+}
+
+.page__large-button {
+    @include btn-dark;
+}

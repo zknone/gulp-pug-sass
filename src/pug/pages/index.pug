@@ -1,0 +1,15 @@
+include ../mixin-elements/_mixins
+include ../layouts/_header
+include ../datas/index-data.pug
+main.page
+	h1 Привет!
+	button.page__large-button Привет
+	button.page__button Ну
+	button.page__second-button Пока
+	+_list('intro', links)
+	each good in cards 
+		+_card('goods', good)
+include ../layouts/_footer
+
+		
+		

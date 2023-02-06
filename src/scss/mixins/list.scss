@@ -1,0 +1,19 @@
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  @mixin horizontal-flex-list {
+    @include reset-list;
+  
+    display: flex;
+    flex-direction: row;
+  }
+
+  @mixin vertical-flex-list {
+    @include reset-list;
+  
+    display: flex;
+    flex-direction: column;
+  }

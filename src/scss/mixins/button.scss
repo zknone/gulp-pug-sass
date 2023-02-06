@@ -1,0 +1,123 @@
+@import "./media";
+
+@mixin btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1.5rem;
+    font-family: $font-family;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+  
+    &:disabled {
+      cursor: progress;
+      background-color: $btn-disabled;
+    }
+  
+    > svg {
+      margin-right: .7em;
+      margin-left: -.7em;
+    }
+  
+    > span + svg {
+      margin-right: -4px;
+      margin-left: 14px;
+    }
+  
+    @include media-min(xl) { justify-content: initial; }
+  }
+
+  @mixin btn-primary {
+    @include btn;
+  
+    color: white;
+    background-color: $primary-btn-bg;
+  
+    &:hover,
+    &:focus,
+    &:active { color: white; }
+    &:hover { background-color: $primary-btn-hover; }
+    &:focus { outline: 3px solid $primary-btn-transparent-hover; }
+    &:active { background-color: $primary-btn-active; }
+  }
+
+  @mixin btn-primary-lg {
+    @include btn-primary;
+  
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  @mixin btn-secondary {
+    @include btn;
+  
+    color: $secondary-btn-color;
+    background-color: $secondary-btn-bg;
+  
+    &:hover,
+    &:focus,
+    &:active { color: $secondary-btn-active; }
+    &:hover { background-color: $secondary-btn-hover; }
+  }
+  
+  @mixin btn-dark {
+    @include btn;
+  
+    color: white;
+    background-color: ($btn-dark-bg);
+  
+    &:hover,
+    &:focus,
+    &:active { color: white; }
+    &:hover { background-color: ($btn-dark-bg-hover); }
+    &:active { background-color: ($btn-dark-bg-active); }
+  }
+  @mixin btn-border {
+    @include btn;
+    color: $secondary-color;
+    border: 1px solid $btn-border-color;
+  
+    &:hover,
+    &:focus,
+    &:active { color: $secondary-color; }
+    &:hover { background-color: ($btn-border-color); }
+    &:active { background-color: ($btn-border-color); }
+  }
+  @mixin btn-dark-lg {
+    @include btn-dark;
+  
+    font-size: 1.5rem;
+    font-weight: 300;
+  
+    > svg {
+      margin-top: .25rem;
+      opacity: .7;
+    }
+  }
+  @mixin btn-ico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: $primary-color;
+  
+    > svg {
+      width: 24px;
+      height: 24px;
+      color: white;
+    }
+  }
+  @mixin btn-preview {
+    @include btn-ico;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  

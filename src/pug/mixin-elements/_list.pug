@@ -1,0 +1,5 @@
+mixin _list(block_name, items)
+    ul(class=`${block_name}__list`)
+        each item in items
+            li(class= `${block_name}__item`)
+                a(href= `${item.link}`)= item.title

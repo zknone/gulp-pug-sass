@@ -1,0 +1,45 @@
+$white: rgb(243, 242, 242);
+$rose: rgb(228, 182, 182);
+
+$primary-color: black;
+$secondary-color: gray;
+$primary-bg-color: beige;
+
+//fonts
+$font-family: Arial;
+
+//buttons
+$btn-disabled: rgb(198, 198, 198);
+
+//primary-button;
+$primary-btn-bg: rgb(159, 224, 159);
+$primary-btn-hover: rgb(87, 132, 87);
+$primary-btn-active: rgb(0, 255, 0);
+$primary-btn-transparent-hover: rgb(31, 31, 31);
+
+//secondary-button;
+$secondary-btn-color: rgb(0, 0, 0);
+$secondary-btn-bg: rgb(159, 161, 224);
+$secondary-btn-hover: rgb(134, 135, 148);
+$secondary-btn-active: rgb(0, 30, 255);
+$secondary-btn-transparent-hover: rgb(81, 81, 81);
+
+//button-border
+$btn-border-color: rgb(27, 87, 12);
+
+
+//button dark
+$btn-dark-bg: rgb(223, 101, 101);
+$btn-dark-bg-hover: rgb(250, 103, 103);
+$btn-dark-bg-active: rgb(255, 42, 42);
+
+$widths: (
+    'xs': 368px,
+    'md': 720px,
+    'lg': 1200px,
+    'xl': 1860px,
+);
+
+$gap-sm: 10px;
+$gap-md: 15px;
+$gap-lg: 25px;

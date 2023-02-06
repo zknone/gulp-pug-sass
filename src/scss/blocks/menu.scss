@@ -1,0 +1,8 @@
+@import "../mixin";
+
+.menu { @include container; }
+
+.menu__list {
+    @include horizontal-flex-list;
+    column-gap: 15px;
+}

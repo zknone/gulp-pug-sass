@@ -1,0 +1,11 @@
+@mixin card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    &-header {
+        color: red;
+    }
+    &-text {
+        color: brown;
+    }
+}
