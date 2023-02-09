@@ -1,0 +1,5 @@
+mixin _input(block_name, form_input)
+    fieldset(class=`${block_name}__form-block`)
+        for element in form_input 
+            label(for= element.id)
+                input(class=`${block_name}__list` type= element.type name= element.name)
