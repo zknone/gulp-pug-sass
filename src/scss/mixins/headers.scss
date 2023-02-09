@@ -1,0 +1,23 @@
+@mixin h2 ($font-size: 36px, $margin-bottom: 5px) {
+  margin-top: 0;
+  margin-bottom: $margin-bottom;
+  font-size: $font-size;
+  font-weight: 600;
+  line-height: 1.25;
+
+  @include media-min(md) { font-weight: 500; }
+  @include media-min(lg) {
+    font-size: $font-size - 2px;
+    font-weight: 400;
+  }
+}
+@mixin h3 ($font-size: 24px, $margin-bottom: 4px) {
+  margin-top: 0;
+  margin-bottom: $margin-bottom;
+  font-size: $font-size;
+  font-weight: 500;
+
+  @include media-min(lg) {
+    font-size: $font-size - 2px;
+  }
+}

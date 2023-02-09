@@ -1,15 +1,12 @@
 include ../mixin-elements/_mixins
 include ../layouts/_header
-include ../datas/index-data.pug
+include ../datas/index-data
 main.page
-	h1 Привет!
+	h2.title Привет!
+	h2.title--minor Пока!
 	button.page__large-button Привет
 	button.page__button Ну
 	button.page__second-button Пока
 	+_list('intro', links)
-	each good in cards 
-		+_card('goods', good)
+	+_catalog-list('goods', cards)
 include ../layouts/_footer
-
-		
-		

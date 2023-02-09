@@ -1,0 +1,7 @@
+@import "../mixin";
+.title{
+    @include h2;
+    &--minor{
+        @include h3;
+    }
+}

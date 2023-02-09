@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     row-gap: 15px;
-    &-header {
+    border: 1px solid black;
+    &__header {
         color: red;
     }
-    &-text {
+    &__text {
         color: brown;
-    }
+    }    
 }

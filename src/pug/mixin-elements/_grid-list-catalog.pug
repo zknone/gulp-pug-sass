@@ -1,0 +1,5 @@
+mixin _catalog-list(block_name, items)
+    ul(class=`${block_name}__list catalog`)
+        each item in items
+            li(class= `${block_name}__card card`)
+                +_card(block_name, item)

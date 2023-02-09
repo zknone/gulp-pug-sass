@@ -22,7 +22,8 @@
   </body>
 </html>
 <main class="page">
-  <h1>Привет!</h1>
+  <h2 class="title">Привет!</h2>
+  <h2 class="title--minor">Пока!</h2>
   <button class="page__large-button">Привет</button>
   <button class="page__button">Ну</button>
   <button class="page__second-button">Пока</button>
@@ -30,18 +31,20 @@
         <li class="intro__item"><a href="reg.ru">wow</a></li>
         <li class="intro__item"><a href="abc.ru">mew</a></li>
       </ul>
-      <div class="goods__card">
-        <h3 class="goods__card-header">First good</h3><img class="goods__card-img" src="wow.ru/1.jpg"/>
-        <p class="goods__card-text">hello. my name is Ivan</p>
-      </div>
-      <div class="goods__card">
-        <h3 class="goods__card-header">Second good</h3><img class="goods__card-img" src="wow.ru/1.jpg"/>
-        <p class="goods__card-text">hello. my name is Boris</p>
-      </div>
-      <div class="goods__card">
-        <h3 class="goods__card-header">Second good</h3><img class="goods__card-img" src="wow.ru/1.jpg"/>
-        <p class="goods__card-text">hello. my name is Boris</p>
-      </div>
+      <ul class="goods__list catalog">
+        <li class="goods__card card">
+              <h3 class="goods__card-header card__header">First good</h3><img class="goods__card-img card__image" src="wow.ru/1.jpg"/>
+              <p class="goods__card-text card__text">hello. my name is Ivan</p>
+        </li>
+        <li class="goods__card card">
+              <h3 class="goods__card-header card__header">Second good</h3><img class="goods__card-img card__image" src="wow.ru/1.jpg"/>
+              <p class="goods__card-text card__text">hello. my name is Boris</p>
+        </li>
+        <li class="goods__card card">
+              <h3 class="goods__card-header card__header">Second good</h3><img class="goods__card-img card__image" src="wow.ru/1.jpg"/>
+              <p class="goods__card-text card__text">hello. my name is Boris</p>
+        </li>
+      </ul>
 </main>
 <header class="menu">
   <ul class="menu__list">

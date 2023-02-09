@@ -1,0 +1,13 @@
+@mixin text {
+  max-width: 85%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  font-size: calc(.9rem + 1vw);
+  font-weight: 200;
+  line-height: 1.25;
+
+  @include media-min(lg) {
+    max-width: 70%;
+    font-size: calc(.7rem + 1vw);
+  }
+}
