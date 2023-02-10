@@ -11,10 +11,5 @@ main.page
 	button.page__second-button Пока
 	+_list('intro', links)
 	+_catalog-list('goods', cards)
-	form.from
-		h3.form__header Форма
-		for form_input in form_inputs 
-			+_input('form', form_input)
-		button(type="submit") Отправить
-		//- все это можно в один миксин запихать, тут главное структура данных
+	+_form('form',form_inputs)
 include ../layouts/_footer

@@ -1,4 +1,9 @@
-mixin __form (class, form__inputs)
-
-//должен еще откудато брать название филдсета
-//правильно собрать все требования по форме
+mixin _form (block_name, form__inputs)
+    form(class=`${block_name}`)
+        h2(class=`${block_name}__header`) Форма
+        for form_input in form_inputs
+            fieldset(class=`${block_name}__${form_input.fieldset}`)
+                for element in form_input.inputs
+                    label(for= element.id)
+                        input(class=`${block_name}__list` type= element.type name= element.name)
+        button(type="submit") Отправить
