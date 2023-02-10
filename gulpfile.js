@@ -43,17 +43,17 @@ const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, svgSpriteTask));
 
 // Построение сценариев выполнения задач
-const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const start = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 const deployZIP = gulp.series(reset, mainTasks, zip);
 const deployFTP = gulp.series(reset, mainTasks, ftp);
 
 // Экспорт сценариев
 export { svgSpriteTask }
-export { dev }
+export { start }
 export { build }
 export { deployZIP }
 export { deployFTP }
 
 // Выполнение сценария по умолчанию
-gulp.task('default', dev);
+gulp.task('default', start);

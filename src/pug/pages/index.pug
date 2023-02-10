@@ -2,14 +2,15 @@ include ../mixin-elements/_mixins
 include ../layouts/_header
 include ../datas/index-data
 include ../datas/form-data
-main.page
+main
 	h1 Мой шаблон
-	h2.title Привет!
-	h3.title--minor Пока!
-	button.page__large-button Привет
-	button.page__button Ну
-	button.page__second-button Пока
-	+_list('intro', links)
-	+_catalog-list('goods', cards)
-	+_form('form',form_inputs)
+	section.page
+		h2.title Привет!
+		h3.title--minor Пока!
+		button.page__large-button Привет
+		button.page__button Ну
+		button.page__second-button Пока
+		+_list('intro', links)
+		+_catalog-list('goods', cards)
+		+_form('form',form_inputs, 'page__form')
 include ../layouts/_footer

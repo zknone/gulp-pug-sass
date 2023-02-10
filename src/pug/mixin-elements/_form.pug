@@ -1,9 +1,10 @@
-mixin _form (block_name, form__inputs)
-    form(class=`${block_name}`)
-        h2(class=`${block_name}__header`) Форма
-        for form_input in form_inputs
-            fieldset(class=`${block_name}__${form_input.fieldset}`)
-                for element in form_input.inputs
-                    label(for= element.id)
-                        input(class=`${block_name}__list` type= element.type name= element.name)
-        button(type="submit") Отправить
+mixin _form (block_name, form__inputs, mix_block)
+    - const form_class = mix_block ? `${block_name} ${mix_block}`: `${block_name}`
+        form(class= `${form_class}` action= 'https://echo.htmlacademy.ru' method= 'post')
+            h2(class=`${block_name}__header`) Форма
+            for form_input in form_inputs
+                fieldset(class=`${block_name}__${form_input.fieldset}`)
+                    for element in form_input.inputs
+                        label= element.label
+                            input(class=`${block_name}__list` type= element.type name= element.name required= element.required ? element.required : null)                                                          
+            button(type="submit") Отправить
