@@ -5,12 +5,12 @@ include ../datas/form-data
 main
 	h1 Мой шаблон
 	section.page
-		h2.title Привет!
+		h2.title.title--h2 Привет!
 		h3.title--minor Пока!
 		button.page__large-button Привет
 		button.page__button Ну
 		button.page__second-button Пока
-		+_list('intro', links)
+		+_list('intro', links, 'reset-list')
 		+_catalog-list('goods', cards)
 		+_form('form',form_inputs, 'page__form')
 include ../layouts/_footer

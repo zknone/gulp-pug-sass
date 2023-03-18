@@ -6,5 +6,16 @@ mixin _form (block_name, form__inputs, mix_block)
                 fieldset(class=`${block_name}__${form_input.fieldset}`)
                     for element in form_input.inputs
                         label= element.label
-                            input(class=`${block_name}__list` type= element.type name= element.name required= element.required ? element.required : null)                                                          
+                        if element.text_area
+                            textarea(class=`${block_name}__list` type= element.type name= element.name required= element.required ? element.required : null)
+                        else 
+                            input(class=`${block_name}__list` type= element.type name= element.name required= element.required ? element.required : null)
+
             button(type="submit") Отправить
+
+
+
+
+
+            //- не забудь, что у тебя в данных есть тема, что можно инпут на text-area заменить
+            //надо посмотреть условия, как они работаю
